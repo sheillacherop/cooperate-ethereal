@@ -1,0 +1,66 @@
+/* 1. IMPORTING THE FONT */
+/* We are grabbing Cormorant Garamond (for the Saudagar look) and Inter (for clean body text) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap');
+
+/* 2. SETTING THE VARIABLES */
+/* This is our "Paint Bucket". If we change one color here, it changes everywhere. */
+:root {
+  --iced-mint: #EFF5DF;  /* Your light background color */
+  --cadet-blue: #5F9EA0; /* Your primary brand color */
+  --deep-slate: #2F4F4F; /* Dark text for contrast */
+  --white: #ffffff;
+}
+
+/* 3. GLOBAL STYLES */
+body {
+  margin: 0;                    /* Removes the default white gap around the page */
+  padding: 0;                   /* Keeps content tight */
+  background-color: var(--white); /* Main background starts white */
+  font-family: 'Inter', sans-serif; /* Default font for general reading */
+  color: var(--deep-slate);      /* Default text color */
+}
+
+/* 4. THE URGENCY BAR */
+.urgency-bar {
+  background-color: var(--cadet-blue); /* Using your blue for the alert */
+  color: var(--iced-mint);             /* Using mint for the text for that "Luxe" contrast */
+  text-align: center;                  /* Centers the warning */
+  padding: 12px;                       /* Gives it height */
+  font-weight: 600;                    /* Makes it bold-ish */
+  font-size: 0.85rem;                  /* Keeps it small and professional */
+}
+
+/* 5. THE HEADLINE (The "Saudagar" Vibe) */
+h1 {
+  font-family: 'Cormorant Garamond', serif; /* This is where the magic happens! */
+  font-size: 4rem;                          /* Makes it massive and bold */
+  color: var(--cadet-blue);                 /* Your beautiful blue */
+  line-height: 1.1;                         /* Tightens the space between lines */
+  margin-bottom: 20px;                      /* Pushes the description down a bit */
+}
+
+/* 6. THE HERO SECTION */
+.hero-fortress {
+  background-color: var(--iced-mint); /* Applying the Iced Mint background here */
+  padding: 100px 10%;                 /* 100px top/bottom, 10% space on sides */
+  min-height: 60vh;                   /* Makes it cover 60% of the screen height */
+  display: flex;                      /* Flexible layout to center content */
+  align-items: center;                /* Vertically centers the text */
+}
+
+/* 7. THE BUTTONS */
+.btn-primary {
+  background-color: var(--cadet-blue); /* Solid blue button */
+  color: var(--iced-mint);             /* Mint text on button */
+  padding: 15px 35px;                  /* Thick, expensive-feeling button */
+  text-decoration: none;               /* Removes the underline from link */
+  font-weight: bold;                   /* Makes it pop */
+  border-radius: 0px;                  /* Sharp corners = Professional/Law Firm */
+  display: inline-block;               /* Ensures it respects the padding */
+  transition: 0.3s;                    /* Smooth hover effect */
+}
+
+.btn-primary:hover {
+  background-color: var(--deep-slate); /* Changes color when you hover */
+  transform: translateY(-3px);         /* Tiny lift effect */
+}
